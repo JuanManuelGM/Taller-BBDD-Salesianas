@@ -1,6 +1,6 @@
 ---------------------------------------------------------
 -- AUTOR       : NTTDATA CENTERS - SEVILLA     
--- DESCRIPCIÓN : JAVA - JDBC - MYSQL - SANIDAD
+-- DESCRIPCIÓN : JAVA - JDBC - MYSQL - PANDEMIA
 -- RESPONSABLE : SALESIANAS Mª AUXILIADORA
 ---------------------------------------------------------
 
