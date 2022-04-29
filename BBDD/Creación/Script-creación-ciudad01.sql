@@ -1,0 +1,22 @@
+---------------------------------------------------------
+-- AUTOR       : NTTDATA CENTERS - SEVILLA     
+-- DESCRIPCIÓN : JAVA - JDBC - MYSQL - PANDEMIA
+-- RESPONSABLE : SALESIANAS Mª AUXILIADORA
+---------------------------------------------------------
+
+-- Creación de esquema.
+CREATE DATABASE PANDEMIA;
+
+-- Uso de esquema.
+USE PANDEMIA;
+
+-- Creación de tabla ciudad.
+CREATE TABLE PANDEMIA.CIUDAD ( ID_CIUDAD INT (6) AUTO_INCREMENT, NOMBRE VARCHAR (30), PROVINCIA VARCHAR (30), POBLACION INT (11), PRIMARY KEY(ID_CIUDAD));
+
+-- Insercción de datos de ciudad.
+INSERT INTO CIUDAD(NOMBRE, PROVINCIA, POBLACION) VALUES("Madrid","Madrid", 3305408);
+INSERT INTO CIUDAD(NOMBRE, PROVINCIA, POBLACION) VALUES("Pontevedra","Galicia", 83.029);
+INSERT INTO CIUDAD(NOMBRE, PROVINCIA, POBLACION) VALUES("Valencia","Valencia", 789744);
+INSERT INTO CIUDAD(NOMBRE, PROVINCIA, POBLACION) VALUES("Sevilla","Andalucía", 684234);
+INSERT INTO CIUDAD(NOMBRE, PROVINCIA, POBLACION) VALUES("Málaga","Andalucía", 577405);
+
