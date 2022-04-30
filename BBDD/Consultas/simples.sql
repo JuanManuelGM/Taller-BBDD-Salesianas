@@ -4,7 +4,6 @@
 -- RESPONSABLE : SALESIANAS Mª AUXILIADORA
 ---------------------------------------------------------
 
-
 -- Selecciona el nombre, la direccion y el aforo de los dos centros de vacunacion con mayor aforo
 SELECT NOMBRE, DIRECCION, AFORO 
 	FROM CENTRO_VACUNACION 
