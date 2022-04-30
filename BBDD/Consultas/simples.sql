@@ -1,6 +1,8 @@
---------------------------------------------------------
-
---------------------------------------------------------
+---------------------------------------------------------
+-- AUTOR       : NTTDATA CENTERS - SEVILLA     
+-- DESCRIPCIÓN : JAVA - JDBC - MYSQL - PANDEMIA
+-- RESPONSABLE : SALESIANAS Mª AUXILIADORA
+---------------------------------------------------------
 
 
 -- Selecciona el nombre, la direccion y el aforo de los dos centros de vacunacion con mayor aforo
@@ -12,7 +14,7 @@ SELECT NOMBRE, DIRECCION, AFORO
 --son mayor que 800 en la última fecha almacenada.
 SELECT * FROM HOSPITALIZACIONES 
 	WHERE CAMAS_OCUPADAS > 800 
-	AND FECHA IN (
+	AND FECHA = (
 		SELECT MAX(FECHA) 
 		FROM HOSPITALIZACIONES);
 
