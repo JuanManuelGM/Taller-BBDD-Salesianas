@@ -4,8 +4,6 @@
 -- RESPONSABLE : SALESIANAS Mª AUXILIADORA
 ---------------------------------------------------------
 
---Muestra, de las ciudades de una provincia, la poblacion, los contagios totales y las capas ocupadas en un mes--
-
 --Muestra los contagios totales a lo largo de un año, junto a la población, nombre y fecha de los registros de cada ciudad de una provincia específica--
 SELECT CIUDAD.NOMBRE CIUDAD, CIUDAD.POBLACION POBLACION, CONTAGIOS.CONTAGIOS_TOTALES, CONTAGIOS.FECHA 
 	FROM CIUDAD 
@@ -17,11 +15,20 @@ SELECT CIUDAD.NOMBRE AS NOMBRE, CIUDAD.POBLACION AS POBLACION, SUM(VACUNACIONES.
 	FROM VACUNACIONES RIGHT JOIN CIUDAD ON VACUNACIONES.ID_CIUDAD=CIUDAD.ID_CIUDAD 
 	WHERE CIUDAD.PROVINCIA LIKE 'AndalucÃ­a' 
 	GROUP BY CIUDAD.NOMBRE, CIUDAD.POBLACION;
-		
---Muestra la cuenta de los centros principales de cada provincia, junto con su direccion, aforo y las vacunas que suministran	
+	
+-- Muestra, de cada centro de vacunacion, la direccion, el nombre, el aforo, la provincia a la que pertenecen y los nombres de las vacunas que reciben
 SELECT CIUDAD.PROVINCIA AS PROVINCIA, CENTRO_VACUNACION.NOMBRE AS CENTRO, CENTRO_VACUNACION.DIRECCION AS DIRECCION, CENTRO_VACUNACION.AFORO AS AFORO, DISTRIBUIDOR_VACUNA.NOMBRE AS VACUNA 
 	FROM CIUDAD LEFT JOIN CENTRO_VACUNACION ON CIUDAD.ID_CIUDAD=CENTRO_VACUNACION.ID_CIUDAD 
-	LEFT JOIN DISTRIBUIDOR_VACUNA ON CENTRO_VACUNACION.ID_CENTRO=DISTRIBUIDOR_VACUNA.ID_CENTRO;
+	LEFT JOIN DISTRIBUIDOR_VACUNA ON CENTRO_VACUNACION.ID_CENTRO=DISTRIBUIDOR_VACUNA.ID_CENTRO ORDER BY PROVINCIA;
+	
+	
+	
+	------------------------------------------------------------------------------------------------
+	
+	-- LAS CONSULTAS DE ABAJO QUIERO HACERLAS PERO TODAVIA NO SE COMO --
+	
+
+--Muestra, de las ciudades de una provincia, la poblacion, los contagios totales y las capas ocupadas en un mes--
 	
 --Muestra la evolución de vacunados y contagiados en una ciudad a lo largo de un año de una ciudad--
 
