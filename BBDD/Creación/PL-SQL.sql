@@ -1,3 +1,12 @@
+-------------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------
+--Autor       : Salesianas de Nervión
+--Descripción : Script 1 PL/SQL
+--Responsable : Rafael Blanco Aranda 
+---------------------------------------
+
+
 --Ante la necesidad de tomar medidas de control de la pandemia, se pretende crear un procedimiento--
 --que localice y establezca un confinamiento a las ciudades que superen actualmente un número de--
 --contagios determinado--
@@ -20,8 +29,14 @@ END homeArrest;
 --Se realiza la prueba para confinar las ciudades con un número de contagios superior a 5000, en este caso, Sevilla--
 EXECUTE HOMEARREST(5000);
 
+
 -------------------------------------------------------------------------------------------------------------------------
 
+---------------------------------------
+--Autor       : Salesianas de Nervión
+--Descripción : Script 1 PL/SQL
+--Responsable : Santiago López 
+---------------------------------------
 --Con la intención de facilitar el control de la evolución de la pandemia, se crea un procedimiento
 --que, dadas dos fechas y un ID de una ciudad, muestra los datos de nuevos contagios, junto con el procentaje de poblacion
 --infectada del mes
@@ -105,9 +120,9 @@ CREATE OR REPLACE PROCEDURE CVPR_CONTAGIOS  IS
     
 /****************************************************************************************************************
 Nombre: CVPR_CONTAGIOS
-Autor: Christian Lob�n Sevilla
-Fecha de creaci�n: 07/05/2022
-Par�metros de entrada:
+Autor: Christian Lobón Sevilla
+Fecha de creación: 07/05/2022
+Parámetros de entrada:
 Salida:
 Comentarios:
     
@@ -196,12 +211,3 @@ EXECUTE alertanivel;
 SELECT NOMBRE, CAMAS_OCUPADAS FROM CIUDAD INNER JOIN HOSPITALIZACIONES ON CIUDAD.ID_CIUDAD = HOSPITALIZACIONES.ID_CIUDAD;
 	
 	
-
-
-
-
-
-
-
-
-
