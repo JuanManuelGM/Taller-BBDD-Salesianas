@@ -4,7 +4,7 @@
 -- RESPONSABLE : SALESIANAS Mª AUXILIADORA
 ---------------------------------------------------------
 
---Muestra la suma de las vacunaciones totales de un año de cada ciudad cuya suma supere las 2200, y las ordena de mayor a menor--
+--Muestra la suma de las vacunaciones totales de un año de cada ciudad, siempre que esta suma supere las 2200, y las ordena de mayor a menor--
 SELECT ID_CIUDAD, SUM(VACUNACIONES_TOTALES) VACUNAS  FROM VACUNACIONES 
 	WHERE YEAR(FECHA)=2020 
 	GROUP BY ID_CIUDAD HAVING VACUNAS>=2200  
